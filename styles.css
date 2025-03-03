@@ -16,6 +16,28 @@ html, body {
     min-height: 100vh;
 }
 
+.custom-img {
+    max-height: 420px; 
+    object-fit: cover; 
+  }
+  
+  
+  @media (max-width: 576px) {
+    .custom-img {
+      max-height: 180px; 
+    }
+  }
+
+  .product-container {
+    background-size: 100%;
+    transition: background-size 0.3s ease-in-out;
+  }
+
+  .product-container:hover{
+    background-size: 130%;
+  }
+
+
 /*Estilos Blog*/
 #h2-blog {
     color: #5f2d2d; /* Azul Bootstrap */
@@ -54,3 +76,4 @@ html, body {
 .card-body p {
     flex-grow: 1; /* Permite que el texto se expanda según su tamaño */
 }
+

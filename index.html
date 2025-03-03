@@ -12,7 +12,6 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- font Graduate link- blog
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
     <title>Nombre la tienda</title>
   </head>
@@ -24,8 +23,83 @@
     <!-- Main content -->
     <main>
       <section>
-        <div id="carrousel" class="container"></div>
-        <div id="best-products" class="container"></div>
+        <div class="container-lg mx-lg-auto px-0">
+          <div id="main-carousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item carousel-img active">
+                <img
+                  src="https://st4.depositphotos.com/1000689/29098/i/450/depositphotos_290987134-stock-photo-fitness-and-sport-motivation-strong.jpg"
+                  class="d-block w-100 h-auto img-fluid custom-img"
+                  alt="running-inspiration"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>Desafía tus límites</h1>
+                  <h3>El esfuerzo de hoy es la victoria de mañana</h3>
+                </div>
+              </div>
+              <div class="carousel-caption d-md-none">
+                <h6 class="">Desafía tus límites</h6>
+                <p class="">El esfuerzo de hoy es la victoria de mañana</p>
+              </div>
+              <div class="carousel-item carousel-img">
+                <img
+                  src="https://p4.wallpaperbetter.com/wallpaper/641/292/969/muhammad-ali-sport-sports-boxing-hd-wallpaper-preview.jpg"
+                  class="d-block w-100 h-auto img-fluid custom-img"
+                  alt="box-champion"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>Boxeador legendario</h1>
+                  <h3>La determinación te lleva lejos</h3>
+                </div>
+                <div class="carousel-caption d-md-none">
+                  <h6 class="">Boxeador legendario</h6>
+                  <p class="">La determinación te llevara lejos</p>
+                </div>
+              </div>
+              <div class="carousel-item carousel-img">
+                <img
+                  src="https://media.gq.com.mx/photos/5d2622a33ee46e0009338dcc/master/w_1600%2Cc_limit/GettyImages-500671490.jpg"
+                  class="d-block w-100 h-auto img-fluid custom-img"
+                  alt="training-weight"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>Fuerza y dedicación</h1>
+                  <h3>Entrena duro, supera retos</h3>
+                </div>
+                <div class="carousel-caption d-md-none">
+                  <h6 class="">Fuerza y dedicación</h6>
+                  <p class="">Entrena duro, supera retos</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#main-carousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#main-carousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="best-products" class="container-lg mx-lg-auto px-0 row g-0"></div>
       </section>
 
       <!-- Scrool cards tendencies -->
@@ -34,16 +108,19 @@
       </section>
 
       <!-- Publicity banner -->
-       <section>
+      <section>
         <div class="container"></div>
-       </section>
+      </section>
 
-       <!-- Scrool cards with all brands -->
-        <section>
-            <div class="container"></div>
-        </section>
 
-        <!-- Blog  -->
+
+      <!-- Scrool cards with all brands -->
+      <section>
+        <div class="container"></div>
+      </section>
+
+
+      <!-- Blog  -->
          <section id="blog-section">
             <div class="titulo-container">
               <h2 id="h2-blog" class="text-center">USA College Football: Lo que debes saber</h2>              
@@ -54,15 +131,14 @@
             </div>
             </div>
          </section>
-
     </main>
 
     <!-- Footer container -->
     <footer>
-        <!-- Navigation -->
-        <div></div>
-        <!-- Legal information -->
-        <div></div>
+      <!-- Navigation -->
+      <div></div>
+      <!-- Legal information -->
+      <div></div>
     </footer>
     <!-- JS logic link -->
     <script src="./js/main.js"></script>
