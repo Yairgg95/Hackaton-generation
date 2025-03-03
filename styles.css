@@ -15,3 +15,53 @@ html, body {
     grid-template-rows: auto 1fr auto; 
     min-height: 100vh;
 }
+
+
+
+.marcas-carousel {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: rgb(27, 55, 148);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 2, 8, 0.925);
+    margin-bottom: 40px;
+}
+
+.marcas-carousel-container {
+    display: flex;
+    animation: scroll 8s linear infinite; /* Aumenté la duración para una animación más suave */
+}
+
+.marca-item {
+    flex: 0 0 auto;
+    margin-right: 20px; /* Espacio entre las marcas */
+}
+
+.marca-logo {
+    width: 135px; /* Establece el ancho deseado */
+    height: 150px; /* Establece la altura deseada */
+    object-fit: cover;
+}
+
+.seccion-superior {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 20px;
+}
+
+.outfit-anime {
+    text-align: center;
+    display: grid;
+    place-items: center; /* Centrar horizontal y verticalmente */
+    height: 420px; /* Ejemplo de altura del contenedor */
+}
+
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
