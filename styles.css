@@ -1,0 +1,17 @@
+/* Reset styles */
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Grid structure fo navbar, main, footer */
+.container-grid {
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh;
+}
