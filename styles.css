@@ -191,3 +191,22 @@ html, body {
 .card-body p {
     flex-grow: 1; /* Permite que el texto se expanda según su tamaño */
 }
+
+/*Estilos deportes-carousel*/
+.titulo-deportes{
+  max-width: auto;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid #777b80;
+}
+.titulo-deportes h2{
+  text-align: center;
+  font-weight: bolder;
+  font-size: clamp(1rem, 5vw, 3rem);
+  color: brown;
+  font-family: system-ui;
+  font-weight: 700;
+  
+}

@@ -1,3 +1,29 @@
+//********************Sports data INICIO*********************
+const sports = [
+  { name: "Fútbol", 
+    image: "../assets/football.png", 
+    description: "Balones, zapatos, camisetas y más." },
+  { name: "Baloncesto", 
+    image: "../assets/basketball.jpg", 
+    description: "Balones, canastas y ropa deportiva." },
+  { name: "Tenis", 
+    image: "../assets/tenis.jpg", 
+    description: "Raquetas, pelotas y redes." },
+  { name: "Natación", 
+    image: "../assets/swimming.jpg", 
+    description: "Trajes de baño, gafas y gorros." },
+  { name: "Ciclismo", 
+    image: "../assets/ciclism.jpg", 
+    description: "Bicicletas, cascos y accesorios." },
+  { name: "Vóleibol", 
+    image: "../assets/volley.jpg", 
+    description: "Balones, rodilleras y redes." },
+  { name: "Atletismo", image: "../assets/atletism.jpg", description: "Zapatillas, cronómetros y más." },
+  { name: "Escalada", image: "../assets/hiking.jpg", description: "Arneses, cuerdas y equipo especializado." },
+  ];
+//********************Sports data FIN*********************
+
+
 // Products data
 const tendenciesProducts = [
   {
@@ -241,6 +267,42 @@ function addToCart(item, quantity) {
   const toast = new bootstrap.Toast(toastElement); // Initialize the toast
   toast.show(); // Show the toast
 }
+
+//************************************INICIO************************************
+//********************Render Carrousell Categorías Deportes*********************
+const sportsContainer = document.getElementById("carousel-sports");
+sports.forEach((sport, index) => {
+  // Crear el contenedor del item
+  const sportItem = document.createElement("div");
+  sportItem.className = "carousel-item";
+
+  // el primer elemento debe ser el activo
+  if (index === 0) sportItem.classList.add("active");
+  
+  // Crear etiqueta img 
+  const sportImg = document.createElement("img");
+  sportImg.src = sport.image;
+  sportImg.alt = sport.name;
+  sportImg.className = "d-block w-100"; //imagen responsive
+
+  //Contenido carousel
+  const contentItem = document.createElement("div");
+  contentItem.className =" carousel-caption position-absolute bottom-0 start-0 p-3 text-white bg-dark bg-opacity-50 w-100";
+  const title = document.createElement("h5");
+  title.innerText = sport.name;
+  const description = document.createElement("p");
+  description.innerText = sport.description;
+  const exploreButton = document.createElement("button");
+  exploreButton.className = "btn btn-dark product-btn col-sm-6 col-md-3 rounded-pill";
+  exploreButton.innerText = "Productos";
+
+  //Agregar todos los elementos al DOM
+  contentItem.append(title, description, exploreButton);
+  sportItem.append(sportImg, contentItem);
+  sportsContainer.append(sportItem);
+});
+//************************************FIN************************************
+
 
   // Fetch Blog content
     const blogContent = async () => {
