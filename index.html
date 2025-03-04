@@ -23,12 +23,55 @@
       href="https://fonts.googleapis.com/css2?family=Graduate&display=swap"
       rel="stylesheet"
     />
-
-    <title>Nombre la tienda</title>
+    <link rel="icon" type="image/png" href="./assets/sneakers-svgrepo-com.png">
+    <title>HypeRun</title>
   </head>
   <body>
     <!-- Navbar container -->
-    <header></header>
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img src="./assets/sneakers-svgrepo-com.png" alt="HypeRun Logo" height="40" />
+          </a>
+    
+          <!-- Botón de colapso en móviles -->
+          <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Contenido del Navbar -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#best-products">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#brands">Marcas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#blog-section">Blog</a>
+              </li>
+            </ul>
+    
+            <!-- Botón de Login -->
+            <a href="#" class="btn btn-primary">Iniciar sesión</a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- Main content -->
     <main class="container">
@@ -141,7 +184,7 @@
 
       <!-- carrusel de marcas -->
 
-      <section class="marcas-carousel">
+      <section id="brands" class="marcas-carousel">
         <div class="marcas-carousel-container">
           <div class="marca-item">
             <a href="https://www.nike.com/" target="_blank">
