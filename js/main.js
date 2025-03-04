@@ -62,45 +62,6 @@ const tendenciesProducts = [
   },
 ];
 
-const products = [
-  {
-    title: "CR7 snekears",
-    description: "Sneakers oficiales del SIIIIUUUU",
-    img: "sustituir por una liga de una imagen del producto",
-    quantityStock: 1,
-    price: 1500,
-    categories: ["Footbal", "Calzado"],
-    brand: "Nike",
-  },
-  {
-    title: "CR7 snekears",
-    description: "Sneakers oficiales del SIIIIUUUU",
-    img: "sustituir por una liga de una imagen del producto",
-    quantityStock: 1,
-    price: 1500,
-    categories: ["Footbal", "Calzado"],
-    brand: "Nike",
-  },
-  {
-    title: "CR7 snekears",
-    description: "Sneakers oficiales del SIIIIUUUU",
-    img: "sustituir por una liga de una imagen del producto",
-    quantityStock: 1,
-    price: 1500,
-    categories: ["Footbal", "Calzado"],
-    brand: "Nike",
-  },
-  {
-    title: "CR7 snekears",
-    description: "Sneakers oficiales del SIIIIUUUU",
-    img: "sustituir por una liga de una imagen del producto",
-    quantityStock: 1,
-    price: 1500,
-    categories: ["Footbal", "Calzado"],
-    brand: "Nike",
-  },
-  //Add more
-];
 
 
 const bestsProducts = [
@@ -170,10 +131,11 @@ const tendencyElement = document.getElementById("tendency");
 let currentIndex = 0;
 function renderItems() {
   tendencyElement.innerHTML = "";
-  for (let i = currentIndex; i < currentIndex + 3; i++) {
+  const itemsPerView = window.innerWidth < 576 ? 2 : 3;
+  for (let i = currentIndex; i < currentIndex + itemsPerView; i++) {
     if (i < tendenciesProducts.length) {
       const col = document.createElement("div");
-      col.className = "col-4 col-md-4 slider-item";
+      col.className = `col-${12 / itemsPerView} col-md-4 slider-item`;
       col.innerHTML = `
         <div class="card h-100 border-0 clickable-card" data-index="${i}">
           <img src="${tendenciesProducts[i].image}" class="card-img-top h-50 object-fit-cover w-100 col-6 col-md-4 fixed-size" alt="${tendenciesProducts[i].title}">
@@ -208,6 +170,8 @@ function renderItems() {
       renderItems();
     }
   });
+
+  window.addEventListener("resize", renderItems);
 }
 
 // Function to show modal with item details

@@ -10,9 +10,19 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Graduate&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Nombre la tienda</title>
   </head>
@@ -99,244 +109,264 @@
           </div>
         </div>
 
-        <div id="best-products" class="container-lg mx-lg-auto px-0 row g-0"></div>
+        <div
+          id="best-products"
+          class="container-lg mx-lg-auto px-0 row g-0"
+        ></div>
       </section>
 
-
-    <!-- Scrool cards tendencies -->
-    <section>
-      <div class="container my-5">
-        <div class="slider-container">
-          <div class="slider-controls pb-2">
-            <button class="btn btn-light btn-sm " id="prev-btn">&lt;</button>
-            <button class="btn btn-light btn-sm" id="next-btn">&gt;</button>
+      <!-- Scrool cards tendencies -->
+      <section>
+        <div class="container my-1">
+          <div class="slider-container">
+            <div class="slider-controls pb-2">
+              <button class="btn btn-light btn-sm" id="prev-btn">&lt;</button>
+              <button class="btn btn-light btn-sm" id="next-btn">&gt;</button>
+            </div>
+            <div id="tendency" class="row g-2"></div>
           </div>
-          <div id="tendency" class="row g-2"></div>
         </div>
-      </div>
-      <div id="toastContainer" class="position-fixed bottom-0 end-0">
-        <div id="successToast" class="toast text-center item" role="alert" data-bs-delay="2000">
+        <div id="toastContainer" class="position-fixed bottom-0 end-0">
+          <div
+            id="successToast"
+            class="toast text-center item"
+            role="alert"
+            data-bs-delay="2000"
+          >
             <h6>Tu producto fue agregado con éxito!</h6>
-        <div class="toast-body">
-    </section>
-
-          
- 
-<!-- carrusel de marcas -->
-    
-        <div class="text-center">
-            <p class="h1">Marcas más vendidas</p>
-            <p class="h2">"Entrena como un héroe, viste como un campeón"</p>
+            <div class="toast-body"></div>
+          </div>
         </div>
-    
-        <div class="contenedor-secciones">
-            <section class="seccion-superior">
-                <div class="outfit-anime">
-                    <img src="img/541362fc3b909cc6475451504d079df2.png" alt="anime" class="outfit-anime-img">
-                </div>
-            </section>
-          </div>
-    
-    <!-- Carrusel de imágenes -->
-  <section class="marcas-carousel">
-      <div class="marcas-carousel-container">
+      </section>
+
+      <!-- carrusel de marcas -->
+
+      <section class="marcas-carousel">
+        <div class="marcas-carousel-container">
           <div class="marca-item">
-              <a href="https://www.nike.com/" target="_blank">
-                  <img src="img/nike.jpg" alt="Nike" class="marca-logo">
-              </a>
+            <a href="https://www.nike.com/" target="_blank">
+              <img src="./assets/nike.jpg" alt="Nike" class="marca-logo" />
+            </a>
           </div>
           <div class="marca-item">
-              <a href="https://www.adidas.com/" target="_blank">
-                  <img src="img/adidas.png" alt="Adidas" class="marca-logo">
-              </a>
+            <a href="https://www.adidas.com/" target="_blank">
+              <img src="./assets/adidas.png" alt="Adidas" class="marca-logo" />
+            </a>
           </div>
           <div class="marca-item">
-              <a href="https://global.puma.com/en/us" target="_blank">
-                  <img src="img/puma.jpg" alt="Puma" class="marca-logo">
-              </a>
+            <a href="https://global.puma.com/en/us" target="_blank">
+              <img src="./assets/puma.jpg" alt="Puma" class="marca-logo" />
+            </a>
           </div>
           <div class="marca-item">
-              <a href="https://www.reebok.com/" target="_blank">
-                  <img src="img/reebok.jpg" alt="Reebok" class="marca-logo">
-              </a>
+            <a href="https://www.reebok.com/" target="_blank">
+              <img src="./assets/reebok.jpg" alt="Reebok" class="marca-logo" />
+            </a>
           </div>
           <div class="marca-item">
-              <a href="https://youngla.com/" target="_blank">
-                  <img src="img/youngla.png" alt="YoungLA" class="marca-logo">
-              </a>
+            <a href="https://youngla.com/" target="_blank">
+              <img
+                src="./assets/youngla.png"
+                alt="YoungLA"
+                class="marca-logo"
+              />
+            </a>
           </div>
-          <div class="marca-item">
-              <a href="https://uk.gymshark.com/" target="_blank">
-                  <img src="img/gymchark.png" alt="Gym Shark" class="marca-logo">
-              </a>
-          </div> 
           <div class="marca-item">
             <a href="https://uk.gymshark.com/" target="_blank">
-                <img src="img/new-balance-usa.png" alt="new balanceusa" class="marca-logo">
+              <img
+                src="./assets/gymchark.png"
+                alt="Gym Shark"
+                class="marca-logo"
+              />
             </a>
+          </div>
+          <div class="marca-item">
+            <a href="https://uk.gymshark.com/" target="_blank">
+              <img
+                src="./assets/new-balance-usa.png"
+                alt="new balanceusa"
+                class="marca-logo"
+              />
+            </a>
+          </div>
+          <div class="marca-item">
+            <a href="https://uk.gymshark.com/" target="_blank">
+              <img
+                src="./assets/images (1).jpg"
+                alt="new balanceusa"
+                class="marca-logo"
+              />
+            </a>
+          </div>
         </div>
-        <div class="marca-item">
-          <a href="https://uk.gymshark.com/" target="_blank">
-              <img src="img/images (1).jpg" alt="new balanceusa" class="marca-logo">
-          </a>
-      </div>
-      </div>
-  </section>
+      </section>
 
- 
       <!-- Publicity banner -->
 
-       <section class="banner">
-      <img src="./images/adidas-originals-bad-bunny-messi-billboard-1240.webp" alt="Banner"  class="banner-img"/>
-       </section>
+      <section class="banner">
+        <img
+          src="./assets/adidas-originals-bad-bunny-messi-billboard-1240.webp"
+          alt="Banner"
+          class="banner-img"
+        />
+      </section>
 
-       <section>
+      <section>
         <p class="pie-foto">Descubre los nuevos modelos</p>
-        <div class="banner-text" class="bangers-regular">ESTILOS CONTEMPORÁNEOS</div>
+        <div class="banner-text" class="bangers-regular">
+          ESTILOS CONTEMPORÁNEOS
+        </div>
         <div class="button-container">
           <button class="buy-button">Comprar</button>
         </div>
-       </section>
-
-
-
+      </section>
 
       <!-- Scrool cards with all brands -->
       <section>
         <div class="container"></div>
       </section>
 
-
       <!-- Blog  -->
-         <section id="blog-section">
-            <div class="titulo-container">
-              <h2 id="h2-blog" class="text-center">USA College Football: Lo que debes saber</h2>              
-            </div>
-            <div id="tarjetas-container" class="container">
-              <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
-                <!-- tarjetas -->
-            </div>
-            </div>
-         </section>
+      <section id="blog-section">
+        <div class="titulo-container">
+          <h2 id="h2-blog" class="text-center">
+            USA College Football: Lo que debes saber
+          </h2>
+        </div>
+        <div id="tarjetas-container" class="container">
+          <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+            <!-- tarjetas -->
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer container -->
 
     <footer class="bg-light text-dark pt-5 pb-4">
-        <!-- Navigation -->      
-          <div class="container text-center text-md-start">
-            <div class="row text-center text-md-start">
-              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">                
-                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Tienda Deportiva name</h5>
-                <hr class="mb-4">
-                <p>Bienvenido a SportZone, tu destino número uno para todo lo relacionado con el deporte. Desde equipamiento de alto rendimiento hasta la moda deportiva más innovadora, aquí encontrarás todo lo que necesitas para llevar tu pasión al siguiente nivel.
-                </p>
-              </div>
+      <!-- Navigation -->
+      <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              HypeRun
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              Bienvenido a HypeRun, tu destino número uno para todo lo
+              relacionado con el deporte. Desde equipamiento de alto rendimiento
+              hasta la moda deportiva más innovadora, aquí encontrarás todo lo
+              que necesitas para llevar tu pasión al siguiente nivel.
+            </p>
+          </div>
 
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              Categorias
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#!" class="text-dark">Zapatillas</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Ropa</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Accesorios</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Marcas</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Niños</a>
+            </p>
+          </div>
 
-
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">                
-                <h5 class="text-uppercase mb-4 font-weight-bold text-primary ">Categorias</h5>
-                <hr class="mb-4">
-                <p>
-                  <a href="#!" class="text-dark">Zapatillas</a>
-                </p> 
-                <p>
-                  <a href="#!" class="text-dark">Ropa</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-dark">Accesorios</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-dark">Marcas</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-dark">Niños</a>
-                </p>
-              </div>
-
-              
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">                
-                <h5 class="text-uppercase mb-4 font-weight-bold text-primary ">Dejanos ayudarte</h5>
-                <hr class="mb-4">
-                <p>
-                  <a href="#!" class="text-dark">Obtener ayuda</a>
-                </p> 
-                <p>
-                  <a href="#!" class="text-dark">Estado del pedido </a>
-                </p>
-                <p>
-                  <a href="#!" class="text-dark">Devoluciones</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-dark">Opciones de pago</a>
-                </p>
-            </div>
-
-
-              <div>
-                <p>
-                  <li class="fas fa-home me-3"> </li> Mexico, Ciudad de Mexico, Av. Deportiva 123
-                </p>
-
-                <p>
-                  <li class="fas fa-envelope me-3"> </li> nikeMX@gmail.com
-                </p>
-
-                <p>
-                  <li class="fas fa-phone me-3"> </li> +52 55 1938 5478
-                </p>
-
-                <p>
-                  <li class="fas fa-print me-3"> </li> +52 55 1938 5555
-                </p>
-              </div>
-
-              <hr class="mb-4">
-              <div>
-                <p>
-                  Copyright Todos los derechos reservados &copy;
-                  <a href="#">
-                    <strong class="text-primary">test</strong>
-                  </a>
-                </p>
-              </div>
-
-              <div class="text-center">
-                <ul class="list-unstyled list-inline">
-                  <li class="list-inline-item">
-                    <a href="#" class="text-dark"> 
-                      <i class="fab fa-facebook"> </i>
-                    </a>
-                  </li>
-                  
-                  <li class="list-inline-item">
-                    <a href="#" class="text-dark"> 
-                      <i class="fab fa-twitter"> </i>
-                    </a>
-                  </li>
-
-                  <li class="list-inline-item">
-                    <a href="#" class="text-dark"> 
-                      <i class="fab fa-google-plus"> </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
+              Dejanos ayudarte
+            </h5>
+            <hr class="mb-4" />
+            <p>
+              <a href="#!" class="text-dark">Obtener ayuda</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Estado del pedido </a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Devoluciones</a>
+            </p>
+            <p>
+              <a href="#!" class="text-dark">Opciones de pago</a>
+            </p>
           </div>
         </div>
- 
-        <!-- Legal information -->
-        <div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 text-center">
-                <p class="text-dark">Aviso de privacidad</p>
-              </div>
-            </div>
-          </div>
 
+        <div>
+          <p>
+            <li class="fas fa-home me-3"></li>
+            Mexico, Ciudad de Mexico, Av. Deportiva 123
+          </p>
+
+          <p>
+            <li class="fas fa-envelope me-3"></li>
+            ayuda@hyperun.com
+          </p>
+
+          <p>
+            <li class="fas fa-phone me-3"></li>
+            +52 55 1938 5478
+          </p>
+
+          <p>
+            <li class="fas fa-print me-3"></li>
+            +52 55 1938 5555
+          </p>
+        </div>
+
+        <hr class="mb-4" />
+        <div>
+          <p>
+            Copyright Todos los derechos reservados
+            <a href="#">
+              <strong class="text-primary">HypeRun</strong>
+            </a>
+          </p>
+        </div>
+
+        <div class="text-center">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="#" class="text-dark">
+                <i class="fab fa-facebook"> </i>
+              </a>
+            </li>
+
+            <li class="list-inline-item">
+              <a href="#" class="text-dark">
+                <i class="fab fa-twitter"> </i>
+              </a>
+            </li>
+
+            <li class="list-inline-item">
+              <a href="#" class="text-dark">
+                <i class="fab fa-google-plus"> </i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Legal information -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p class="text-dark">Aviso de privacidad</p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- JS logic link -->
@@ -349,4 +379,3 @@
     ></script>
   </body>
 </html>
-
