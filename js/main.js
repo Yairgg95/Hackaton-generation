@@ -18,8 +18,12 @@ const sports = [
   { name: "Vóleibol", 
     image: "../assets/volley.jpg", 
     description: "Balones, rodilleras y redes." },
-  { name: "Atletismo", image: "../assets/atletism.jpg", description: "Zapatillas, cronómetros y más." },
-  { name: "Escalada", image: "../assets/hiking.jpg", description: "Arneses, cuerdas y equipo especializado." },
+  { name: "Atletismo", 
+   image: "../assets/atlestism.jpg", 
+   description: "Zapatillas, cronómetros y más." },
+  { name: "Escalada", 
+   image: "../assets/hiking.jpg", 
+   description: "Arneses, cuerdas y equipo especializado." },
   ];
 //********************Sports data FIN*********************
 
