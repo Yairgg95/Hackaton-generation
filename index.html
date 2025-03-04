@@ -11,7 +11,7 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> // cdn iconos
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 
     <title>Nombre la tienda</title>
@@ -103,11 +103,25 @@
         <div id="best-products" class="container-lg mx-lg-auto px-0 row g-0"></div>
       </section>
 
-      <!-- Scrool cards tendencies -->
-      <section>
-        <div id="" class="container"></div>
-      </section>
 
+    <!-- Scrool cards tendencies -->
+    <section>
+      <div class="container my-5">
+        <div class="slider-container">
+          <div class="slider-controls pb-2">
+            <button class="btn btn-light btn-sm " id="prev-btn">&lt;</button>
+            <button class="btn btn-light btn-sm" id="next-btn">&gt;</button>
+          </div>
+          <div id="tendency" class="row g-2"></div>
+        </div>
+      </div>
+      <div id="toastContainer" class="position-fixed bottom-0 end-0">
+        <div id="successToast" class="toast text-center item" role="alert" data-bs-delay="2000">
+            <h6>Tu producto fue agregado con éxito!</h6>
+        <div class="toast-body">
+    </section>
+
+ 
       <!-- Publicity banner -->
 
        <section class="banner">
@@ -275,3 +289,4 @@
     ></script>
   </body>
 </html>
+
