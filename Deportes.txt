@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Deportivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        .carousel-container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .sport-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .sport-item img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            width: 50%;
+            border-radius: 10px;
+        }
+        .close {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Productos Deportivos</h1>
+    <div class="carousel-container">
+        <div class="carousel" id="sports-carousel"></div>
+        <div class="controls">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+    
+    <script>
+        const sports = [
+            { name: "Fútbol", image: "https://www.google.com/search?sca_esv=74940b13bb8c626e&sxsrf=AHTn8zoLL2A-D6i8V64zfLsvsFI-kNc1WA:1741038667297&q=f%C3%BAtbol&udm=2&fbs=ABzOT_BnMAgCWdhr5zilP5f1cnRvK9uZj3HA_MTJAA6lXR8yQAbzyrKIF75NMnKCBDSAUZnAVX77gsDS-D8P-wh0IUqHGaQQaldLC27ZdbP3hbLpAD6pMQ_fpx69usegngwfqnAi-jh_Ah_KcaFkZi0phYF5SPmQQVI3gQMD0lZpJdLgZgI533m1naAXgvn87GZ3mJXAFvm-rANWmb7pnhtNGkzoyKNcEQ&sa=X&ved=2ahUKEwirpbe68u6LAxVvC0QIHbdvBEoQtKgLegQIGhAB&biw=1920&bih=945&dpr=1#vhid=woo4jPhwtXW2AM&vssid=mosaic", description: "Balones, zapatos, camisetas y más." },
+            { name: "Baloncesto", image: "https://www.google.com/search?q=baloncesto&sca_esv=74940b13bb8c626e&udm=2&biw=1920&bih=945&sxsrf=AHTn8zqBSqtaI-MwUVEIJx40Gr5PkgbHBw%3A1741038669093&ei=TSTGZ7G0BdL4kPIP15Gi8AI&ved=0ahUKEwjxjqW78u6LAxVSPEQIHdeICC4Q4dUDCBE&uact=5&oq=baloncesto&gs_lp=EgNpbWciCmJhbG9uY2VzdG8yDRAAGIAEGLEDGEMYigUyChAAGIAEGEMYigUyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEi0IVDdEFiHIHAFeACQAQCYAccCoAG4CaoBBzUuNC4wLjG4AQPIAQD4AQGYAg-gAqYKwgIGEAAYBxgewgIHECMYJxjJAsICCBAAGIAEGLEDmAMAiAYBkgcHNi44LjAuMaAH1DY&sclient=img#vhid=A9KvmwTnczjalM&vssid=mosaic", description: "Balones, canastas y ropa deportiva." },
+            { name: "Tenis", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenniscalonge.com%2Fes%2Fcuales-son-las-reglas-del-tenis%2F&psig=AOvVaw3pknJC5FI-c1sViiGTDUCo&ust=1741125300159000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLDt863z7osDFQAAAAAdAAAAABAE", description: "Raquetas, pelotas y redes." },
+            { name: "Natación", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.rtve.es%2Ftelevision%2F20220730%2Fpor-natacion-buena-cuidar-cerebro-beneficios%2F2392766.shtml&psig=AOvVaw0pAqC4pQrIjCq-1Uwiajj_&ust=1741125349201000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIiEisbz7osDFQAAAAAdAAAAABAE", description: "Trajes de baño, gafas y gorros." },
+            { name: "Ciclismo", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.canyon.com%2Fes-mx%2Fblog-content%2Fconsejos%2Fquemar-calorias-bicicleta%2Fb24062022.html&psig=AOvVaw1LxY5CvxBLfxzi2j9iYtcR&ust=1741125452903000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDT_Pvz7osDFQAAAAAdAAAAABAE", description: "Bicicletas, cascos y accesorios." },
+            { name: "Vóleibol", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.marti.mx%2Fno-dejes-pasar-el-balon-el-arte-del-bloqueo-en-voleibol%2F&psig=AOvVaw2FawNOHprQvvJyG3GrbZ6x&ust=1741125553599000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNCNjr707osDFQAAAAAdAAAAABAE", description: "Balones, rodilleras y redes." },
+            { name: "Boxeo", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fentrenadorpersonaloriol.com%2Fconsejos-de-entrenamiento%2Fdomina-el-ring-consejos-esenciales-de-un-entrenador-de-boxeo%2F&psig=AOvVaw2Xj3Aa0h2dyV9zN0jYRrZZ&ust=1741125879521000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOi8itL17osDFQAAAAAdAAAAABAE", description: "Guantes, sacos y protectores." },
+            { name: "Golf", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Freglasdeldeporte.com%2Fgolf%2F&psig=AOvVaw2BpOublJdZe7MuJQ8_-Ydq&ust=1741126079788000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPig7Z727osDFQAAAAAdAAAAABAE", description: "Palos, pelotas y accesorios." },
+            { name: "Hockey", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fjourney.app%2Fblog%2Freglas-del-hockey-sobre-hielo-como-se-juega%2F&psig=AOvVaw2acnuPhbVdLUX9ZRAQRhZ3&ust=1741126134357000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOC45Lv27osDFQAAAAAdAAAAABAE", description: "Palos, discos y equipo de protección." },
+            { name: "Rugby", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fintergeneraciones.cl%2Frugby-league-o-rugby-union%2F&psig=AOvVaw2A1c8TwnefBGAfxt37ThXo&ust=1741126271803000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLDI3JH37osDFQAAAAAdAAAAABAE", description: "Balones, cascos y uniformes." },
+            { name: "Atletismo", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Feducacionfisicaeo.wordpress.com%2F2011%2F04%2F13%2Ftletismo%2F&psig=AOvVaw0-NKm2liQ79yyj2Kip52K9&ust=1741126391374000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLDW6MP37osDFQAAAAAdAAAAABAJ", description: "Zapatillas, cronómetros y más." },
+            { name: "Escalada", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Frumbonaturaleza.com%2Fblog%2Fescalada%2Fque-es-escalada%2F&psig=AOvVaw0_DEQx_1RuXpI89Tu7OzHE&ust=1741126507466000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCQlOz37osDFQAAAAAdAAAAABAE", description: "Arneses, cuerdas y equipo especializado." },
+            { name: "Patinaje", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Froex.es%2Fshop%2Fblog%2Fpatinaje-de-velocidad%2F&psig=AOvVaw1oEugjZ7wQhnF0RTK-qpk8&ust=1741126554744000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCtyYb47osDFQAAAAAdAAAAABAE", description: "Patines, cascos y protecciones." },
+            { name: "Surf", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmundoentrenamiento.com%2Faspectos-fisiologicos-y-rendimiento-en-el-surf%2F&psig=AOvVaw2SVKbjZBw9D23HvwOqp6L9&ust=1741126616428000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJC-nKH47osDFQAAAAAdAAAAABAE", description: "Tablas, trajes de neopreno y más." },
+            { name: "Esquí", image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.marca.com%2Ftiramillas%2Factualidad%2F2022%2F02%2F10%2F620549ab46163fa9208b45a0.html&psig=AOvVaw1u5I56g-Y0O6tceRrE87Sw&ust=1741126709799000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjI3c347osDFQAAAAAdAAAAABAE", description: "Esquís, bastones y ropa térmica." }
+        ];
+        
+        const carousel = document.getElementById("sports-carousel");
+        let index = 0;
+        
+        sports.forEach(sport => {
+            const div = document.createElement("div");
+            div.classList.add("sport-item");
+            div.innerHTML = `<img src="${sport.image}" alt="${sport.name}" onclick="openModal(${sports.indexOf(sport)})"><p>${sport.name}</p>`;
+            carousel.appendChild(div);
+        });
+        
+        function nextSlide() {
+            if (index < sports.length - 1) index++;
+            updateCarousel();
+        }
+        
+        function prevSlide() {
+            if (index > 0) index--;
+            updateCarousel();
+        }
+        
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+        
+        function openModal(idx) {
+            document.getElementById("modal-title").textContent = sports[idx].name;
+            document.getElementById("modal-description").textContent = sports[idx].description;
+            document.getElementById("modal").style.display = "block";
+        }
+        
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target === document.getElementById("modal")) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
