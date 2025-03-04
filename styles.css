@@ -4,11 +4,9 @@
         padding: 0;
         box-sizing: border-box;
 }
-
 html, body {
     height: 100%;
 }
-
 /* Grid structure fo navbar, main, footer */
 .container-grid {
     display: grid;
@@ -17,6 +15,27 @@ html, body {
 }
 
 
+.contenedor-secciones {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.seccion-superior {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;
+    padding: 20px;
+}
+
+.outfit-anime {
+    text-align: center;
+}
+
+.outfit-anime-img {
+    max-width: 550px;
+    height: auto;
+}
 
 .marcas-carousel {
     width: 100%;
@@ -31,37 +50,18 @@ html, body {
 
 .marcas-carousel-container {
     display: flex;
-    animation: scroll 8s linear infinite; /* Aumenté la duración para una animación más suave */
-}
-
-.marca-item {
-    flex: 0 0 auto;
-    margin-right: 20px; /* Espacio entre las marcas */
+    animation: scroll 8s linear infinite;
+    transition: transform 0.3s ease;
 }
 
 .marca-logo {
-    width: 135px; /* Establece el ancho deseado */
-    height: 150px; /* Establece la altura deseada */
+    width: 135px;
+    height: 150px;
     object-fit: cover;
+    margin-right: 10px;
 }
-
-.seccion-superior {
-    display: flex;
-    justify-content: space-around; /* Distribuye los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    padding: 20px;
-}
-
-.outfit-anime {
-    text-align: center;
-    display: grid;
-    place-items: center; /* Centrar horizontal y verticalmente */
-    height: 420px; /* Ejemplo de altura del contenedor */
-}
-
 
 @keyframes scroll {
-    0% { transform: translateX(100%); }
+    0% { transform: translateX(0%); }
     100% { transform: translateX(-100%); }
 }
-
