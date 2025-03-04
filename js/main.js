@@ -19,7 +19,7 @@ const tendenciesProducts = [
       "https://images.unsplash.com/photo-1590673846749-e2fb8f655df8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM2fHxzaG9lc3xlbnwwfHwwfHx8MA%3D%3D",
     description:
       "Tenis clásicos que combinan estilo y funcionalidad, perfectos para el día a día o actividades deportivas.Description for item 2",
-    quantityStock: 1,
+    quantityStock: 5,
     price: 3800,
     categories: ["Diseñador", " Calzado"],
     brand: "Nike",
@@ -31,7 +31,7 @@ const tendenciesProducts = [
       "https://images.unsplash.com/photo-1600185365778-7875a359b924?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI1fHx8ZW58MHx8fHx8",
     description:
       "Zapatillas cómodas y resistentes, diseñadas para ofrecer soporte y estilo en cada paso.",
-    quantityStock: 1,
+    quantityStock: 10,
     price: 3500,
     categories: ["Comodidad", " Calzado"],
     brand: "Nike",
@@ -43,7 +43,7 @@ const tendenciesProducts = [
       "https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDY4fHx8ZW58MHx8fHx8",
     description:
       "Tenis con un diseño atemporal, ideales para un look casual y un rendimiento óptimo.",
-    quantityStock: 1,
+    quantityStock: 2,
     price: 1800,
     categories: ["Casual", " Calzado"],
     brand: "Levi's",
@@ -55,7 +55,7 @@ const tendenciesProducts = [
       "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2N3x8fGVufDB8fHx8fA%3D%3D",
     description:
       "Calzado deportivo ligero y flexible, perfecto para movilidad y confort en cualquier actividad.",
-    quantityStock: 1,
+    quantityStock: 8,
     price: 1500,
     categories: ["Basquetbol", " Calzado"],
     brand: "Jordan",
@@ -176,11 +176,11 @@ function renderItems() {
       col.className = "col-4 col-md-4 slider-item";
       col.innerHTML = `
         <div class="card h-100 border-0 clickable-card" data-index="${i}">
-          <img src="${tendenciesProducts[i].image}" class="card-img-top h-50 object-fit-scale" alt="${tendenciesProducts[i].title}">
+          <img src="${tendenciesProducts[i].image}" class="card-img-top h-50 object-fit-cover w-100 col-6 col-md-4 fixed-size" alt="${tendenciesProducts[i].title}">
           <div class="card-body flex-grow-0">
             <h5 class="card-title fs-md-5 fs-6">${tendenciesProducts[i].title}</h5>
             <h5 class="card-title fs-md-5 fs-6">${tendenciesProducts[i].categories}</h5>
-            <h5 class="card-title fs-md-5 fs-6">${tendenciesProducts[i].price}</h5>
+            <h5 class="card-title fs-md-5 fs-6">$${tendenciesProducts[i].price}</h5>
           </div>
         </div>
       `;

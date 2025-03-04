@@ -155,4 +155,3 @@ html, body {
 .card-body p {
     flex-grow: 1; /* Permite que el texto se expanda según su tamaño */
 }
-
