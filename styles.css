@@ -15,3 +15,144 @@ html, body {
     grid-template-rows: auto 1fr auto; 
     min-height: 100vh;
 }
+
+/* Main carousel*/
+.custom-img {
+    max-height: 420px; 
+    object-fit: cover; 
+  }
+  
+  
+  @media (max-width: 576px) {
+    .custom-img {
+      max-height: 180px; 
+    }
+  }
+
+  .product-container {
+    background-size: 100%;
+    transition: background-size 0.3s ease-in-out;
+  }
+
+  .product-container:hover{
+    background-size: 130%;
+  }
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 130vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.banner-img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.8);
+}
+/* Texto */
+.pie-foto {
+    text-align: center;
+    padding-top: 2rem;
+    font-style: italic;
+}
+.banner-text {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px auto;
+    max-width: 80%;
+    color: brown;
+}
+.bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+/* Contenedor para centrar el botón */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 20px; /* Espacio entre el banner y el botón */
+}
+
+/* Estilos del botón */
+.buy-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 50px; /* Ovalado */
+    cursor: pointer;
+}
+
+/* Efecto hover */
+.buy-button:hover {
+    background: #333; /* Un negro un poco más claro */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+/* Responsividad */
+@media (max-width: 768px) { /* Celulares grandes */
+    .banner {
+        height: 50vh;
+    }
+    .banner-text {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 480px) { /* Celulares pequeños */
+    .banner {
+        height: 45vh;
+    }
+}
+
+/*Estilos Blog*/
+#h2-blog {
+    color: #5f2d2d; /* Azul Bootstrap */
+    font-family: 'Graduate', sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(219, 19, 19, 0.2);
+    padding: 10px;
+    border-bottom: 3px solid #777b80;
+}
+
+
+.btn-info {
+    transition: background-color 0.3s ease-in-out; /* Suaviza el cambio */
+}
+
+.btn-info:hover {
+    background-color: #234570 !important; /* Azul más oscuro */
+    border-color: #234570 !important; /* Azul más oscuro */
+    color: rgb(255, 255, 255); /* Mantiene el texto legible */
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Hace que todas tengan la misma altura */
+}
+
+.card-body {
+    flex-grow: 1; /* Expande el contenido sin dejar espacio vacío */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido */
+}
+
+.card-body p {
+    flex-grow: 1; /* Permite que el texto se expanda según su tamaño */
+}
+

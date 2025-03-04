@@ -1,28 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style CSS link -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Style CSS link -->
-  <link rel="stylesheet" href="./styles.css" />
-  <!-- Bootstrap link -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <title>Nombre la tienda</title>
-</head>
-<!-- Grid container -->
+    <title>Nombre la tienda</title>
+  </head>
+  <!-- Grid container -->
+  <body class="container-grid">
+    <!-- Navbar container -->
+    <header></header>
 
-<body class="container-grid">
-  <!-- Navbar container -->
-  <header></header>
+    <!-- Main content -->
+    <main>
+      <section>
+        <div class="container-lg mx-lg-auto px-0">
+          <div id="main-carousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item carousel-img active">
+                <img
+                  src="https://st4.depositphotos.com/1000689/29098/i/450/depositphotos_290987134-stock-photo-fitness-and-sport-motivation-strong.jpg"
+                  class="d-block w-100 h-auto img-fluid custom-img"
+                  alt="running-inspiration"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>Desafía tus límites</h1>
+                  <h3>El esfuerzo de hoy es la victoria de mañana</h3>
+                </div>
+              </div>
+              <div class="carousel-caption d-md-none">
+                <h6 class="">Desafía tus límites</h6>
+                <p class="">El esfuerzo de hoy es la victoria de mañana</p>
+              </div>
+              <div class="carousel-item carousel-img">
+                <img
+                  src="https://p4.wallpaperbetter.com/wallpaper/641/292/969/muhammad-ali-sport-sports-boxing-hd-wallpaper-preview.jpg"
+                  class="d-block w-100 h-auto img-fluid custom-img"
+                  alt="box-champion"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>Boxeador legendario</h1>
+                  <h3>La determinación te lleva lejos</h3>
+                </div>
+                <div class="carousel-caption d-md-none">
+                  <h6 class="">Boxeador legendario</h6>
+                  <p class="">La determinación te llevara lejos</p>
+                </div>
+              </div>
+              <div class="carousel-item carousel-img">
+                <img
+                  src="https://media.gq.com.mx/photos/5d2622a33ee46e0009338dcc/master/w_1600%2Cc_limit/GettyImages-500671490.jpg"
+                  class="d-block w-100 h-auto img-fluid custom-img"
+                  alt="training-weight"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>Fuerza y dedicación</h1>
+                  <h3>Entrena duro, supera retos</h3>
+                </div>
+                <div class="carousel-caption d-md-none">
+                  <h6 class="">Fuerza y dedicación</h6>
+                  <p class="">Entrena duro, supera retos</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#main-carousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#main-carousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
 
-  <!-- Main content -->
-  <main>
-    <section>
-      <div id="carrousel" class="container"></div>
-      <div id="best-products" class="container"></div>
-    </section>
+        <div id="best-products" class="container-lg mx-lg-auto px-0 row g-0"></div>
+      </section>
+
 
     <!-- Scrool cards tendencies -->
     <section>
@@ -41,36 +121,172 @@
         <div class="toast-body">
     </section>
 
-    <!-- Publicity banner -->
-    <section>
-      <div class="container"></div>
-    </section>
+ 
+      <!-- Publicity banner -->
 
-    <!-- Scrool cards with all brands -->
-    <section>
-      <div class="container"></div>
-    </section>
+       <section class="banner">
+      <img src="./images/adidas-originals-bad-bunny-messi-billboard-1240.webp" alt="Banner"  class="banner-img"/>
+       </section>
 
-    <!-- Blog  -->
-    <section>
-      <div class="container"></div>
-    </section>
+       <section>
+        <p class="pie-foto">Descubre los nuevos modelos</p>
+        <div class="banner-text" class="bangers-regular">ESTILOS CONTEMPORÁNEOS</div>
+        <div class="button-container">
+          <button class="buy-button">Comprar</button>
+        </div>
+       </section>
 
-  </main>
 
-  <!-- Footer container -->
-  <footer>
-    <!-- Navigation -->
-    <div></div>
-    <!-- Legal information -->
-    <div></div>
-  </footer>
-  <!-- JS logic link -->
-  <script src="./js/main.js"></script>
-  <!-- Bootstrap logic link -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-</body>
 
+
+      <!-- Scrool cards with all brands -->
+      <section>
+        <div class="container"></div>
+      </section>
+
+
+      <!-- Blog  -->
+         <section id="blog-section">
+            <div class="titulo-container">
+              <h2 id="h2-blog" class="text-center">USA College Football: Lo que debes saber</h2>              
+            </div>
+            <div id="tarjetas-container" class="container">
+              <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+                <!-- tarjetas -->
+            </div>
+            </div>
+         </section>
+    </main>
+
+    <!-- Footer container -->
+
+    <footer class="bg-light text-dark pt-5 pb-4">
+        <!-- Navigation -->      
+          <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">                
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Tienda Deportiva name</h5>
+                <hr class="mb-4">
+                <p>Bienvenido a SportZone, tu destino número uno para todo lo relacionado con el deporte. Desde equipamiento de alto rendimiento hasta la moda deportiva más innovadora, aquí encontrarás todo lo que necesitas para llevar tu pasión al siguiente nivel.
+                </p>
+              </div>
+
+
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">                
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary ">Categorias</h5>
+                <hr class="mb-4">
+                <p>
+                  <a href="#!" class="text-dark">Zapatillas</a>
+                </p> 
+                <p>
+                  <a href="#!" class="text-dark">Ropa</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-dark">Accesorios</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-dark">Marcas</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-dark">Niños</a>
+                </p>
+              </div>
+
+              
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">                
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary ">Dejanos ayudarte</h5>
+                <hr class="mb-4">
+                <p>
+                  <a href="#!" class="text-dark">Obtener ayuda</a>
+                </p> 
+                <p>
+                  <a href="#!" class="text-dark">Estado del pedido </a>
+                </p>
+                <p>
+                  <a href="#!" class="text-dark">Devoluciones</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-dark">Opciones de pago</a>
+                </p>
+            </div>
+
+
+              <div>
+                <p>
+                  <li class="fas fa-home me-3"> </li> Mexico, Ciudad de Mexico, Av. Deportiva 123
+                </p>
+
+                <p>
+                  <li class="fas fa-envelope me-3"> </li> nikeMX@gmail.com
+                </p>
+
+                <p>
+                  <li class="fas fa-phone me-3"> </li> +52 55 1938 5478
+                </p>
+
+                <p>
+                  <li class="fas fa-print me-3"> </li> +52 55 1938 5555
+                </p>
+              </div>
+
+              <hr class="mb-4">
+              <div>
+                <p>
+                  Copyright Todos los derechos reservados &copy;
+                  <a href="#">
+                    <strong class="text-primary">test</strong>
+                  </a>
+                </p>
+              </div>
+
+              <div class="text-center">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a href="#" class="text-dark"> 
+                      <i class="fab fa-facebook"> </i>
+                    </a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="#" class="text-dark"> 
+                      <i class="fab fa-twitter"> </i>
+                    </a>
+                  </li>
+
+                  <li class="list-inline-item">
+                    <a href="#" class="text-dark"> 
+                      <i class="fab fa-google-plus"> </i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Legal information -->
+        <div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <p class="text-dark">Aviso de privacidad</p>
+              </div>
+            </div>
+          </div>
+
+    </footer>
+
+
+
+    <!-- JS logic link -->
+    <script src="./js/main.js"></script>
+    <!-- Bootstrap logic link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
+
