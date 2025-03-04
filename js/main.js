@@ -1,7 +1,7 @@
 //********************Sports data INICIO*********************
 const sports = [
   { name: "Fútbol", 
-    image: "../assets/futbol.jpg", 
+    image: "../assets/football.jpg", 
     description: "Balones, zapatos, camisetas y más." },
   { name: "Baloncesto", 
     image: "../assets/basketball.jpg", 
