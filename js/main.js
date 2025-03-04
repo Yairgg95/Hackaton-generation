@@ -325,3 +325,4 @@ renderItems();
 // Llamamos a la función para obtener los blogs
 blogContent();
 });
+

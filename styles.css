@@ -4,11 +4,9 @@
         padding: 0;
         box-sizing: border-box;
 }
-
 html, body {
     height: 100%;
 }
-
 /* Grid structure fo navbar, main, footer */
 .container-grid {
     display: grid;
@@ -37,6 +35,129 @@ html, body {
   .product-container:hover{
     background-size: 130%;
   }
+
+.contenedor-secciones {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.seccion-superior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.outfit-anime {
+    text-align: center;
+}
+
+.outfit-anime-img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Carrusel de marcas */
+.marcas-carousel {
+    width: 100%;
+    overflow: hidden;
+    background: rgb(27, 55, 148);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 2, 8, 0.925);
+    margin-bottom: 40px;
+}
+
+.marcas-carousel-container {
+    display: flex;
+    animation: scroll 15s linear infinite;
+    transition: transform 0.3s ease;
+}
+
+.marca-logo {
+    width: 180px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 10px; /* Agrega espacio entre las imágenes */
+}
+
+@media (max-width: 768px) {
+  .marca-logo {
+    width: 100%;
+    height: 120px;
+    margin-right: 0; /* Elimina el margen en pantallas pequeñas */
+  }
+}
+
+/* Animación del carrusel */
+@keyframes scroll {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+/* Media queries para responsividad */
+
+@media (max-width: 320px) {
+    .h1 {
+        font-size: 1.2rem;
+    }
+    .outfit-anime-img {
+        max-width: 200px;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .h1 {
+        font-size: 1.5rem;
+    }
+
+    .h2 {
+        font-size: 1.2rem;
+    }
+
+    .outfit-anime-img {
+        max-width: 100%;
+        min-width: 200px;
+    }
+
+    .marca-item {
+        text-align: center;
+    }
+
+    .marca-logo {
+        width: 100px;
+        height: 120px;
+    }
+
+    .marcas-carousel-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        white-space: normal;
+        animation: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .outfit-anime-img {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .outfit-anime-img {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .h1 {
+        font-size: 3rem;
+    }
+}
 
 /* Banner */
 .banner {
