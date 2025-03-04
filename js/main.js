@@ -9,7 +9,7 @@ const tendenciesProducts = [
       "Calzado deportivo versátil, ideal para cualquier ocasión, con diseño moderno y comodidad duradera.",
     quantityStock: 1,
     price: 2500,
-    categories: ["Fashion", "Calzado"],
+    categories: ["Fashion", " Calzado"],
     brand: "Puma",
   },
   {
@@ -21,8 +21,8 @@ const tendenciesProducts = [
       "Tenis clásicos que combinan estilo y funcionalidad, perfectos para el día a día o actividades deportivas.Description for item 2",
     quantityStock: 1,
     price: 3800,
-    categories: ["Diseñador", "Calzado"],
-    brand: "Puma",
+    categories: ["Diseñador", " Calzado"],
+    brand: "Nike",
   },
   {
     id: 3,
@@ -33,8 +33,8 @@ const tendenciesProducts = [
       "Zapatillas cómodas y resistentes, diseñadas para ofrecer soporte y estilo en cada paso.",
     quantityStock: 1,
     price: 3500,
-    categories: ["Comodidad", "Calzado"],
-    brand: "Puma",
+    categories: ["Comodidad", " Calzado"],
+    brand: "Nike",
   },
   {
     id: 4,
@@ -45,8 +45,8 @@ const tendenciesProducts = [
       "Tenis con un diseño atemporal, ideales para un look casual y un rendimiento óptimo.",
     quantityStock: 1,
     price: 1800,
-    categories: ["Casual", "Calzado"],
-    brand: "Puma",
+    categories: ["Casual", " Calzado"],
+    brand: "Levi's",
   },
   {
     id: 5,
@@ -57,8 +57,8 @@ const tendenciesProducts = [
       "Calzado deportivo ligero y flexible, perfecto para movilidad y confort en cualquier actividad.",
     quantityStock: 1,
     price: 1500,
-    categories: ["Basquetbol", "Calzado"],
-    brand: "Puma",
+    categories: ["Basquetbol", " Calzado"],
+    brand: "Jordan",
   },
 ];
 
@@ -165,6 +165,7 @@ function showModal(item) {
               </div>
               <div class="col-12 col-md-6">
                 <p><strong>Descripción:</strong> ${item.description}</p>
+                <p><strong>Marca:</strong> ${item.brand}</p>
                 <p><strong>Stock:</strong> ${item.quantityStock}</p> <!-- Updated here -->
                 <p><strong>Precio:</strong> ${item.price}</p>
                 <div class="input-group mb-3">
