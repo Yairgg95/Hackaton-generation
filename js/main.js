@@ -177,7 +177,7 @@ function renderItems() {
       col.innerHTML = `
         <div class="card h-100 border-0 clickable-card" data-index="${i}">
           <img src="${tendenciesProducts[i].image}" class="card-img-top h-50 object-fit-scale" alt="${tendenciesProducts[i].title}">
-          <div class="card-body">
+          <div class="card-body flex-grow-0">
             <h5 class="card-title fs-md-5 fs-6">${tendenciesProducts[i].title}</h5>
             <h5 class="card-title fs-md-5 fs-6">${tendenciesProducts[i].categories}</h5>
             <h5 class="card-title fs-md-5 fs-6">${tendenciesProducts[i].price}</h5>
